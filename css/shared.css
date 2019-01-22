@@ -1,0 +1,336 @@
+/*
+|-----------------------------------------------------------------------------------------------------------
+| FONTS
+|-----------------------------------------------------------------------------------------------------------
+|
+*/
+/*
+
+Place all custom fonts here for reference
+
+font-family: 'Source Sans Pro', sans-serif;
+
+font-family: 'Crimson Text', serif;
+
+font-family: 'Playfair Display', serif;
+
+*/
+/*
+|-----------------------------------------------------------------------------------------------------------
+| RESET STYLES
+|-----------------------------------------------------------------------------------------------------------
+*/
+
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,
+big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,tt,var,center,dl,
+dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,
+canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,
+time,mark,audio,video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block; }
+
+body { line-height: 1; }
+
+p ol,
+p ul { list-style: none; }
+
+blockquote,
+q { quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/*
+|-----------------------------------------------------------------------------------------------------------
+| GLOBAL TAG STYLES
+|-----------------------------------------------------------------------------------------------------------
+*/
+
+body {
+    background-color: #ffffff;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #413e3b;
+}
+a,
+a:link,
+a:visited,
+a:focus {
+    color: #589580;
+    font-weight: bold;
+}
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: #589580;
+    font-size: 38px;
+    line-height: 46px;
+}
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: #413e3b;
+    font-size: 32px;
+    line-height: 38px;
+}
+h3 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: #413e3b;
+    font-size: 28px;
+    line-height: 36px;
+}
+h4 {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 700;
+    color: #413e3b;
+    font-size: 28px;
+    line-height: 38px;
+}
+h5 {
+    color: #413e3b;
+    font-size: 26px;
+    line-height: 28px;
+    font-family: 'Crimson Text', serif;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+h6 {
+    color: #413e3b;
+    font-size: 26px;
+    line-height: 28px;
+    font-family: 'Crimson Text', serif;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+@media (min-width: 641px) {
+    h1 {
+        font-size: 52px;
+        line-height: 60px;
+    }
+    h2 {
+        font-size: 54px;
+        line-height: 56px;
+    }
+    h3 {
+        font-size: 38px;
+        line-height: 40px;
+    }
+    h4 {
+        font-size: 26px;
+        line-height: 28px;
+    }
+}
+h1 > a,
+h2 > a,
+h3 > a,
+h4 > a,
+h5 > a,
+h6 > a {
+  font: inherit;
+  color: inherit;
+  text-decoration: none;
+}
+p, 
+table tr th, 
+table tr td {
+    color: #413e3b;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-rendering: optimizeLegibility;
+}
+@media (max-width: 640px) {
+    p {
+        font-size: 16px;
+        line-height: 26px;
+    }
+}
+@media (min-width: 641px) {
+    p {
+        font-size: 18px;
+        line-height: 32px;
+    }
+}
+ul { margin-left: 1.8em; }
+ul, ol, dl {
+    color: #413e3b;
+    font-size: 18px;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    text-rendering: optimizeLegibility;
+}
+
+::-webkit-input-placeholder {
+    color: white;
+    opacity: 1;
+}
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: white;
+    opacity: 1;
+}
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: white;
+    opacity: 1;
+}
+:-ms-input-placeholder {
+    color: white;
+    opacity: 1;
+}
+
+/*
+|-----------------------------------------------------------------------------------------------------------
+| HEADER SECTION
+|-----------------------------------------------------------------------------------------------------------
+*/
+
+.header-section {
+    position: relative;
+    z-index: 999;
+    height: 90px;
+    width: 100%;
+    padding: 18px 15px 5px;
+    background-color: white;
+}
+
+.header-section::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #ebe6e1;
+    pointer-events: none;
+}
+
+.header-section .top-nav-cont {
+    position: relative;
+    width: 100%;
+    max-width: 1260px;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-section .item-inner {
+    display: flex;
+    align-items: center;
+}
+
+.header-section .top-nav-cont .header-right {
+    display: none;
+}
+
+.header-section .top-header {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.header-section .logo {
+    display: inline-block;
+    width: 100%;
+    max-width: 265px;
+    margin-right: 5px;
+}
+
+.header-section .logo img {
+    display: block;
+    width: 100%;
+}
+
+.header-section .mobilenav .utilities {
+    padding: 0 5px;
+    text-align: right;
+}
+
+.header-section .cam-link {
+    font-family: 'Crimson Text', serif;
+    text-transform: uppercase;
+}
+
+.header-section .mobilenav .cam-link {
+    margin-right: 40px;
+    color: white;
+}
+
+.header-section .mobilenav .cam-link i {
+    margin-left: 10px;
+    color: #ddbc33;
+}
+
+.header-section .mobilenav .weather-link {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+@media (min-width: 1025px) {
+    .header-section {
+        height: 130px;
+        padding-top: 0;
+    }
+    .header-section .top-nav-cont {
+        padding: 25px 0;
+    }
+    .header-section .top-nav-cont .header-right {
+        display: block;
+        width: 73%;
+    }
+    .header-section .logo {
+        width: 27%;
+        max-width: 340px;
+    }
+}
+
+/*
+|-----------------------------------------------------------------------------------------------------------
+| BODY SECTION
+|-----------------------------------------------------------------------------------------------------------
+*/
+
+.content {
+    position: relative;
+    width: 100%;
+}
+
+/*
+|-----------------------------------------------------------------------------------------------------------
+| FOOTER SECTION
+|-----------------------------------------------------------------------------------------------------------
+*/
+
+.footer-section {
+    position: relative;
+    text-align: center;
+    z-index: 1;
+}

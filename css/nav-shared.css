@@ -1,0 +1,189 @@
+
+/*
+|-----------------------------------------------------------------------------------------------------------
+| Main Nav Widget 
+|-----------------------------------------------------------------------------------------------------------
+*/
+
+.nav-industry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/*
+|-----------------------------------------------------------------------------------------------------------
+| Interior Nav Widget 
+|-----------------------------------------------------------------------------------------------------------
+*/
+
+/*
+|-----------------------------------------------------------------------------------------------------------
+| Footer Nav Widget 
+|-----------------------------------------------------------------------------------------------------------
+*/
+
+/*
+|-----------------------------------------------------------------------------------------------------------
+| Mobile Nav 
+|-----------------------------------------------------------------------------------------------------------
+*/
+
+.mobilenav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.mobilenav .nav-controls {
+    width: 42px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 18px;
+    right: 15px;
+    pointer-events: all;
+    cursor: pointer;
+    background-color: #837464;
+    border: 1px solid #9ab8ac;
+    color: white;
+    font-size: 20px;
+}
+
+.mobilenav .nav-controls .close {
+    display: none;
+}
+
+.mobilenav.active .nav-controls .close {
+    display: inline-block;
+}
+
+.mobilenav.active .nav-controls .open {
+    display: none;
+}
+
+.mobilenav .mobile-dd {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    max-width: 450px;
+    background-color: #64513d;
+    pointer-events: all;
+}
+
+.mobilenav.active .mobile-dd {
+    display: block;
+}
+
+.mobilenav .mobile-dd .dd-top {
+    margin: 12px 0;
+    padding: 0 15px;
+}
+
+.mobilenav ul {
+    margin: 0;
+    list-style: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: white;
+}
+
+.mobilenav ul ul {
+    display: none;
+}
+
+.mobilenav ul li.active > ul {
+    display: block;
+}
+
+.mobilenav .nav-list ul {
+    background-color: #554534;
+}
+
+.mobilenav .nav-list ul ul {
+    background-color: #483b2c;
+}
+
+.mobilenav .nav-list ul ul ul {
+    background-color: #3d3225;
+}
+
+.mobilenav .nav-list.primary {
+    margin: 25px 0;
+}
+
+.mobilenav .nav-list .item-inner {
+    padding: 12px 15px;
+}
+
+.mobilenav .nav-list > li > ul .item-inner {
+    padding: 10px 15px 10px 22px;
+}
+
+.mobilenav .nav-list > li > ul > li .item-inner {
+    padding: 10px 15px 10px 26px;
+}
+
+.mobilenav .nav-list > li > ul > li > ul > li .item-inner {
+    padding: 10px 15px 10px 32px;
+}
+
+.mobilenav .nav-list .item-inner .toggle-submenu {
+    cursor: pointer;
+    margin-left: auto;
+}
+
+.mobilenav .nav-list .item-inner i {
+    color: #98b8ad;
+    font-size: 14px;
+}
+
+.mobilenav .nav-list li.active > .item-inner i {
+    transform: rotate(180deg);
+}
+
+.mobilenav .nav-list > li.active {
+    background-color: #554534;
+}
+
+.mobilenav .nav-list > li > ul > li.active {
+    background-color: #483b2c;
+}
+
+.mobilenav .nav-list > li > ul > li > ul > li.active {
+    background-color: #3d3225;
+}
+
+.mobilenav .nav-list .item-inner a {
+    color: inherit;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.mobilenav .nav-list ul .item-inner a {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.mobilenav .nav-list.industry {
+    margin-bottom: 25px;
+}
+
+.mobilenav .nav-list.industry .item-inner a {
+    font-family: 'Crimson Text', serif;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+    .mobilenav {
+        display: none;
+    }
+}

@@ -1,0 +1,62 @@
+/* Shared Form */
+.shared-form {
+	position: relative;
+}
+
+/* Shared Input */
+.shared-input,
+.shared-input[type] {
+	border: none;
+	background-color: #fff;
+	height: 40px;
+	line-height: 40px;
+	font-size: 18px;
+	color: #64513d;
+	padding: 0 15px;
+	margin-bottom: 20px;
+}
+.mobilenav .shared-input,
+.mobilenav .shared-input[type] {
+    padding-right: 40px;
+}
+.shared-input::-webkit-input-placeholder {
+	color: #64513d;
+}
+.shared-input::-moz-placeholder {
+	color: #64513d;
+}
+.shared-input:-ms-input-placeholder {
+	color: #64513d;
+}
+.shared-input:-moz-placeholder {
+	color: #64513d;
+}
+
+/* Shared Button */
+.shared-submit {
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    transition: none;
+}
+
+.shared-form .shared-submit {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    cursor: pointer;
+}
+
+.mobilenav .shared-form .shared-submit {
+    width: 38px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #64513d;
+}
+
+.mobilenav .shared-form .shared-submit:focus {
+    background: transparent;
+    outline: none;
+}
