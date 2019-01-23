@@ -2,6 +2,17 @@
     <!-- //////  HEADER //////// -->   
     
     <section class="header-section" data-sv-header-section>
+        <div class="desktop-search">
+            <form action="/" method="GET" class="primary-search-form">
+                <input class="shared-input" type="text" placeholder="Search">
+                <button class="shared-submit" type="button">
+                    <i class="fas fa-search"></i>
+                </button>
+                <button class="close-search" type="button" data-close-primarysearch>
+                    <i class="fas fa-times"></i>
+                </button>
+            </form>
+        </div>
         <div class="top-nav-cont">
             <a href="/" class="logo">
                 <img src="includes/public/assets/images/main-logo.png" alt="Highlands North Carolina logo">
@@ -9,19 +20,145 @@
             <div class="header-right">
                 <div class="top-header">
                     <nav class="nav-industry">
-                        <div class="ind-item">
+                        <div class="ind-item has-dropdown">
                             <div class="item-inner">
                                 <a href="/">weddings</a>
+                                <div class="dropdown-support"></div>
+                                <img src="includes/public/assets/images/nav-marker.png" alt="navigation marker" class="nav-marker">
+                            </div>
+                            <div class="nav-dropdown">
+                                <ul class="nav-list-dd">
+                                    <li>
+                                        <div class="item-inner">
+                                            <a href="/">2nd Level Ind Item</a>
+                                        </div>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <div class="item-inner">
+                                            <a href="/">2nd Level Ind Item</a>
+                                            <div class="dropdown-support"></div>
+                                            <div class="toggle-submenu">
+                                                <i class="fas fa-angle-right"></i>
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <div class="item-inner">
+                                                    <a href="/">3rd Level Ind Item</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-inner">
+                                                    <a href="/">3rd Level Ind Item</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="item-inner">
+                                            <a href="/">2nd Level Ind Item</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-inner">
+                                            <a href="/">2nd Level Ind Item</a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="ind-item">
+                        <div class="ind-item has-dropdown">
                             <div class="item-inner">
                                 <a href="/">live &amp; work</a>
+                                <div class="dropdown-support"></div>
+                                <img src="includes/public/assets/images/nav-marker.png" alt="navigation marker" class="nav-marker">
+                            </div>
+                            <div class="nav-dropdown">
+                                <ul class="nav-list-dd">
+                                    <li>
+                                        <div class="item-inner">
+                                            <a href="/">2nd Level Ind Item</a>
+                                        </div>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <div class="item-inner">
+                                            <a href="/">2nd Level Ind Item</a>
+                                            <div class="dropdown-support"></div>
+                                            <div class="toggle-submenu">
+                                                <i class="fas fa-angle-right"></i>
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <div class="item-inner">
+                                                    <a href="/">3rd Level Ind Item</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-inner">
+                                                    <a href="/">3rd Level Ind Item</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="item-inner">
+                                            <a href="/">2nd Level Ind Item</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-inner">
+                                            <a href="/">2nd Level Ind Item</a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
-                        <div class="ind-item">
+                        <div class="ind-item has-dropdown">
                             <div class="item-inner">
                                 <a href="/">chamber</a>
+                                <div class="dropdown-support"></div>
+                                <img src="includes/public/assets/images/nav-marker.png" alt="navigation marker" class="nav-marker">
+                            </div>
+                            <div class="nav-dropdown">
+                                <ul class="nav-list-dd">
+                                    <li>
+                                        <div class="item-inner">
+                                            <a href="/">2nd Level Ind Item</a>
+                                        </div>
+                                    </li>
+                                    <li class="has-submenu">
+                                        <div class="item-inner">
+                                            <a href="/">2nd Level Ind Item</a>
+                                            <div class="dropdown-support"></div>
+                                            <div class="toggle-submenu">
+                                                <i class="fas fa-angle-right"></i>
+                                            </div>
+                                        </div>
+                                        <ul>
+                                            <li>
+                                                <div class="item-inner">
+                                                    <a href="/">3rd Level Ind Item</a>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="item-inner">
+                                                    <a href="/">3rd Level Ind Item</a>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <div class="item-inner">
+                                            <a href="/">2nd Level Ind Item</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="item-inner">
+                                            <a href="/">2nd Level Ind Item</a>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
                     </nav>
@@ -35,13 +172,192 @@
                             75&deg;F
                         </a>
                     </div>
-                    <div class="search-cont">
+                    <div class="search-cont" data-open-primarysearch>
                         <div class="open-search">
                             <i class="fas fa-search"></i>
                         </div>
                     </div>
                 </div>
-                <div class="bottom-header"></div>
+                <div class="bottom-header">
+                    <nav class="nav-primary">
+                        <div class="primary-item">
+                            <div class="item-inner">
+                                <a href="/">Outdoors</a>
+                                <div class="dropdown-support"></div>
+                            </div>
+                        </div>
+                        <div class="primary-item">
+                            <div class="item-inner">
+                                <a href="/">Where to Stay</a>
+                                <div class="dropdown-support"></div>
+                            </div>
+                        </div>
+                        <div class="primary-item">
+                            <div class="item-inner">
+                                <a href="/">Restaurants</a>
+                                <div class="dropdown-support"></div>
+                            </div>
+                        </div>
+                        <div class="primary-item">
+                            <div class="item-inner">
+                                <a href="/">Things to Do</a>
+                                <div class="dropdown-support"></div>
+                            </div>
+                        </div>
+                        <div class="primary-item has-dropdown">
+                            <div class="item-inner">
+                                <a href="/">About</a>
+                                <div class="dropdown-support"></div>
+                                <img src="includes/public/assets/images/nav-marker.png" alt="navigation marker" class="nav-marker">
+                            </div>
+                            <div class="nav-dropdown">
+                                <div class="left-col">
+                                    <div class="nav-slide">
+                                        <style>
+                                            .nav-slide {
+                                                padding: 10px;
+                                                width: 50%;
+                                            }
+                                            .nav-slide .img-cont {
+                                                padding: 5px;
+                                                background-color: white;
+                                            }   
+                                            .nav-slide .img-cont img {
+                                                display: block;
+                                                width: 100%;
+                                            }
+                                            .nav-slide .title {
+                                                padding-top: 10px;
+                                                text-align: center;
+                                            }.nav-slide .title h2 {
+                                                font-family: 'Source Sans Pro', sans-serif;
+                                                font-size: 22px;
+                                                font-style: normal;
+                                                line-height: 25px;
+                                                margin: 0;
+                                                font-weight: 400;
+                                                color: white;
+                                            }
+                                        </style>
+                                        <a href="/">
+                                            <div class="img-cont">
+                                                <img src="includes/public/assets/images/nav-slide.png" alt="">
+                                            </div>
+                                            <div class="title">
+                                                <h2>Things to Do</h2>
+                                            </div>
+                                        </a>
+                                    </div><!-- nav slide -->
+                                    <ul class="nav-list-dd">
+                                        <li>
+                                            <div class="item-inner">
+                                                <a href="/">2nd Level Nav Item</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item-inner">
+                                                <a href="/">2nd Level Nav Item</a>
+                                            </div>
+                                        </li>
+                                        <li class="has-submenu">
+                                            <div class="item-inner">
+                                                <a href="/">2nd Level Nav Item</a>
+                                                <div class="dropdown-support"></div>
+                                                <div class="toggle-submenu">
+                                                    <i class="fas fa-angle-right"></i>
+                                                </div>
+                                            </div>
+                                            <ul>
+                                                <li>
+                                                    <div class="item-inner">
+                                                        <a href="/">3rd Level Nav Item</a>
+                                                    </div>
+                                                </li>
+                                                <li class="has-submenu">
+                                                    <div class="item-inner">
+                                                        <a href="/">3rd Level Nav Item</a>
+                                                        <div class="dropdown-support"></div>
+                                                        <div class="toggle-submenu">
+                                                            <i class="fas fa-angle-right"></i>
+                                                        </div>
+                                                    </div>
+                                                    <ul>
+                                                        <li>
+                                                            <div class="item-inner">
+                                                                <a href="/">4th Level Nav Item</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="item-inner">
+                                                                <a href="/">4th Level Nav Item</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="item-inner">
+                                                                <a href="/">4th Level Nav Item</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="item-inner">
+                                                                <a href="/">4th Level Nav Item</a>
+                                                            </div>
+                                                        </li>
+                                                        <li>
+                                                            <div class="item-inner">
+                                                                <a href="/">4th Level Nav Item</a>
+                                                            </div>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>
+                                                    <div class="item-inner">
+                                                        <a href="/">3rd Level Nav Item</a>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="item-inner">
+                                                        <a href="/">3rd Level Nav Item</a>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        <li>
+                                            <div class="item-inner">
+                                                <a href="/">2nd Level Nav Item</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item-inner">
+                                                <a href="/">2nd Level Nav Item</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item-inner">
+                                                <a href="/">2nd Level Nav Item</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item-inner">
+                                                <a href="/">2nd Level Nav Item</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item-inner">
+                                                <a href="/">2nd Level Nav Item</a>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="item-inner">
+                                                <a href="/">2nd Level Nav Item</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="right-col"></div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
             </div>
             <div class="mobilenav">
                 <div class="nav-controls" data-toggle-mobilenav>

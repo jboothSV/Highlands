@@ -16,6 +16,7 @@
     <link href="css/nav-shared.css" rel="stylesheet" type="text/css" />
     <link href="css/social.css" rel="stylesheet" type="text/css" />
     <link href="css/shared-form.css" rel="stylesheet" type="text/css" />
+    <link href="css/vguide.css" rel="stylesheet" type="text/css" />
 
     <script src="//code.jquery.com/jquery-1.8.1.min.js"></script>
     <script src="//code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
@@ -41,28 +42,59 @@
 
     <section class="header-slideshow">
         <div class="home-header">
+            <div class="arrow-cont"></div>
             <div class="item">
-                <img src="includes/public/assets/images/header-slideshow1.jpg" />
+                <div class="img-cont">
+                    <picture>
+                        <source srcset="includes/public/assets/images/homepage-slide-sm.png" media="(max-width: 640px)">
+                        <img src="includes/public/assets/images/homepage-slide.png" alt="">
+                    </picture>
+                </div>
+                <div class="slide-content">
+                    <a href="/">
+                        <h2>Elevated Adventures</h2>
+                        <p class="desc">
+                            Bring your love of nature and experience our beautiful surrounding mountains and waterfalls...
+                        </p>
+                    </a>
+                    <a href="/" class="slide-link">explore</a>
+                </div>
             </div>
             <div class="item">
-                <img src="includes/public/assets/images/header-slideshow2.jpg" />
-            </div>
-            <div class="item">
-                <img src="includes/public/assets/images/header-slideshow3.jpg" />
+                <div class="img-cont">
+                    <picture>
+                        <source srcset="includes/public/assets/images/homepage-slide-sm.png" media="(max-width: 640px)">
+                        <img src="includes/public/assets/images/homepage-slide.png" alt="">
+                    </picture>
+                </div>
+                <div class="slide-content">
+                    <a href="/">
+                        <h2>Slide Number Two</h2>
+                        <p class="desc">
+                            Bring your love of nature and experience our beautiful surrounding mountains and waterfalls...
+                        </p>
+                    </a>
+                    <a href="/" class="slide-link">explore</a>
+                </div>
             </div>
         </div>      
     </section>
 
-    <!-- <script>
+    <script>
         $(document).ready(function(){
-            $('.home-header').slick({
+            var slider = $(".header-slideshow .home-header");
+            var arrows = slider.find(".arrow-cont");
+
+            slider.slick({
                 infinite: true,
                 arrows: true,
                 dots: true,
-                autoplay: true,
+                autoplay: false,
                 fade: true,
-                prevArrow: '<div class="arrow-cont"><div type="button" data-role="none" class="slick-prev" aria-label="previous"><img src="includes/public/assets/images/arrow-prev.png"/></div></div>',
-                nextArrow: '<div class="arrow-cont"><div type="button" data-role="none" class="slick-next" aria-label="next"><img src="includes/public/assets/images/arrow-next.png"/></div></div>'
+                prevArrow: '<div class="custom-arrow prev"><div type="button" data-role="none" class="slick-prev" aria-label="previous"><i class="fas fa-angle-left"></i></div></div>',
+                nextArrow: '<div class="custom-arrow next"><div type="button" data-role="none" class="slick-next" aria-label="next"><i class="fas fa-angle-right"></i></div></div>',
+                appendArrows: $(arrows),
+                slide: ".item"
             });
 
             $(window).on('resize orientationchange', function() {
@@ -70,11 +102,118 @@
             });
 
         });
-    </script>    -->
+    </script>   
 
     <!-- //////  BODY  //////// -->
     <section class="content">
-        
+        <div class="intro-panel split"><!-- remove class of split to allow full-width textbox -->
+            <div class="left-col">
+                <img style="display:block;width:100%;" src="includes/public/assets/images/2-col-widget.png" alt="">
+            </div>
+            <div class="right-col">
+                <div class="contentRender_name_plugins_core_textbox">
+                    <h1>The Height of Happiness</h1>
+                    <h5>elevation 4,118 feet</h5>
+                    <p>
+                        The quaint town of Highlands, NC is a hidden jewel just 2 hours drive north of Atlanta surrounded by the Nantahala National Forest and situated atop a plateau at elevation 4118 feet.  Experience mother natures’ four seasons, explore scenic drives and hiking trails; stroll beneath Dry Falls, drive under Bridal Veil Falls or view Whitewater Falls –  the tallest east of the Rockies at 411 feet. Visit Highlands for the ultimate mountain experience and see why Southern Living chose Highlands a top 5 Small Town Getaway.
+                    </p>
+                </div>
+            </div>
+        </div><!-- intro panel -->
+        <div class="tiles">
+            <div class="inner">
+                <div class="tile">
+                   <a href="/">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/tile.png" alt="">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Plan Your Trip</h3>
+                            <p class="desc">
+                                Everything you need to know to make the best of your visit to Highlands... 
+                            </p>
+                        </div>
+                   </a>
+                </div>
+                <div class="tile">
+                   <a href="/">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/tile.png" alt="">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Plan Your Trip</h3>
+                            <p class="desc">
+                                Everything you need to know to make the best of your visit to Highlands... 
+                            </p>
+                        </div>
+                   </a>
+                </div>
+                <div class="tile">
+                   <a href="/">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/tile.png" alt="">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Plan Your Trip</h3>
+                            <p class="desc">
+                                Everything you need to know to make the best of your visit to Highlands... 
+                            </p>
+                        </div>
+                   </a>
+                </div>
+                <div class="tile">
+                   <a href="/">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/tile.png" alt="">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Plan Your Trip</h3>
+                            <p class="desc">
+                                Everything you need to know to make the best of your visit to Highlands... 
+                            </p>
+                        </div>
+                   </a>
+                </div>
+                <div class="tile">
+                   <a href="/">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/tile.png" alt="">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Plan Your Trip</h3>
+                            <p class="desc">
+                                Everything you need to know to make the best of your visit to Highlands... 
+                            </p>
+                        </div>
+                   </a>
+                </div>
+                <div class="tile">
+                   <a href="/">
+                        <div class="img-cont">
+                            <img src="includes/public/assets/images/tile.png" alt="">
+                        </div>
+                        <div class="slide-content">
+                            <h3>Plan Your Trip</h3>
+                            <p class="desc">
+                                Everything you need to know to make the best of your visit to Highlands... 
+                            </p>
+                        </div>
+                   </a>
+                </div>
+            </div>
+        </div><!-- tiles -->
+        <div class="banner">
+            <div class="img-cont">
+                <img src="includes/public/assets/images/banner.png" alt="">
+            </div>
+            <div class="slide-content">
+                <h3>Friday Night Live and Saturdays on Pine</h3>
+                <p class="desc">
+                    Live Music this weekend in Highlands, NC!!! The Blue Ridge Music Trails Friday Night Live continues...
+                </p>
+                <a href="/" class="slide-link">read more</a>
+            </div>
+        </div>
     </section>
 
     <!-- /////  FOOTER INCLUDE  ////// -->
@@ -85,6 +224,17 @@
 <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
 <script type="text/javascript" src="js/nav.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("body").on("click", "[data-open-primarysearch]", function(){
+            $(".header-section").addClass("search-active");
+        });
+        $("body").on("click", "[data-close-primarysearch]", function(){
+            $(".header-section").removeClass("search-active");
+        });
+    });
+</script>
 
 </body>
 </html>

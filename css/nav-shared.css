@@ -4,11 +4,279 @@
 | Main Nav Widget 
 |-----------------------------------------------------------------------------------------------------------
 */
+.nav-primary {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+}
+
+.nav-primary .primary-item {
+    margin-right: 30px;
+    height: 100%;
+}
+
+.nav-primary .primary-item > .item-inner {
+    position: relative;
+    height: 100%;
+}
+
+.nav-primary .primary-item:last-child {
+    margin-right: 0;
+}
+
+.nav-primary .primary-item .nav-marker {
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    pointer-events: none;
+    transition: opacity 0.4s;
+    opacity: 0;
+}
+
+.nav-primary .primary-item.has-dropdown:hover .nav-marker {
+    opacity: 1;
+}
+
+.nav-primary .primary-item a {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #64513d;
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.nav-primary .primary-item > .item-inner a {
+    height: 100%;
+    padding-top: 6px;
+}
 
 .nav-industry {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-right: 30px;
+    position: relative;
+}
+
+.nav-industry .ind-item {
+    margin-right: 30px;
+    height: 100%;
+}
+
+.nav-industry .ind-item:last-child {
+    margin-right: 0;
+}
+
+.nav-industry .ind-item .item-inner {
+    position: relative;
+    height: 100%;
+}
+
+.nav-industry .ind-item .item-inner .nav-marker {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: opacity 0.4s;
+    opacity: 0;
+}
+
+.nav-industry .ind-item.has-dropdown:hover .item-inner .nav-marker {
+    opacity: 1;
+}
+
+.nav-industry .ind-item a {
+    font-family: 'Crimson Text', serif;
+    text-transform: uppercase;
+    color: #64513d;
+}
+
+.nav-industry .nav-dropdown {
+    background-color: #554534;
+    width: 520px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    transition: opacity 0.4s;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-industry .ind-item.has-dropdown:hover .nav-dropdown {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.nav-industry .ind-item:first-child .nav-dropdown {
+    transform: translateX(-40%);
+}
+
+.nav-industry .nav-dropdown a {
+    font-size: 16px;
+    text-transform: none;
+}
+
+.nav-industry .nav-dropdown ul {
+    margin: 0;
+    list-style: none;
+    padding: 15px 0;
+}
+
+.nav-industry .nav-dropdown .nav-list-dd {
+    width: 50%;
+    position: relative;
+}
+
+.nav-industry .nav-dropdown .nav-list-dd ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+    background-color: #46392b;
+}
+
+.nav-industry .nav-dropdown .nav-list-dd > li:hover > .item-inner {
+    background-color: #46392b;
+}
+
+.nav-primary .nav-dropdown {
+    transition: opacity 0.4s;
+    opacity: 0;
+    pointer-events: none;
+    background-color: #64513d;
+}
+
+.nav-primary .primary-item.has-dropdown:hover .nav-dropdown {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.nav-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    width: 100%;
+    max-width: 1020px;
+}
+
+.nav-dropdown .left-col,
+.nav-dropdown .right-col {
+    width: 50%;
+}
+
+.nav-dropdown .left-col {
+    display: flex;
+}
+
+.nav-dropdown ul {
+    margin: 0;
+    list-style: none;
+    line-height: 20px;
+    padding: 12px 0;
+}
+
+.nav-dropdown .nav-list-dd {
+    position: relative;
+    width: 50%;
+}
+
+.nav-dropdown .nav-list-dd ul {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    height: 100%;
+    width: 100%;
+}
+
+.nav-dropdown .nav-list-dd ul {
+    background-color: #554534;
+    display: none;
+}
+
+.nav-dropdown .nav-list-dd li.has-submenu:hover > ul {
+    display: block;
+}
+
+.nav-dropdown .nav-list-dd ul ul {
+    background-color: #46392b;
+}
+
+.nav-dropdown .nav-list-dd > li:hover > .item-inner {
+    background-color: #554534;
+}
+
+.nav-dropdown .nav-list-dd ul > li:hover > .item-inner {
+    background-color: #46392b;
+}
+
+.nav-dropdown .item-inner {
+    position: relative;
+    padding: 10px 15px 10px 30px;
+    justify-content: space-between;
+}
+
+.nav-dropdown .item-inner a {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 17px;
+    font-weight: 400;
+    color: white;
+    width: 100%;
+}
+
+.nav-dropdown .item-inner i {
+    color: #98b8ad;
+    font-size: 20px;
+}
+
+.nav-primary .primary-item:hover > .item-inner > .dropdown-support,
+.nav-industry .ind-item:hover > .item-inner > .dropdown-support {
+    position: absolute;
+    z-index: 100000;
+    top: 100%;
+    right: 0;
+    width: calc(100% + 100px);
+    height: 100%;
+    transition: transform .6s;
+    transform: scaleY(0);
+    transform-origin: center bottom;
+}
+
+.nav-industry .ind-item:hover > .item-inner > .dropdown-support {
+    right: auto;
+    left: -50px;
+}
+
+.nav-primary .primary-item:last-child:hover > .item-inner > .dropdown-support,
+.nav-industry .ind-item:last-child:hover > .item-inner > .dropdown-support {
+    left: auto;
+    right: 0;
+}
+
+.nav-primary .primary-item > .item-inner > a:hover + .dropdown-support,
+.nav-industry .ind-item > .item-inner > a:hover + .dropdown-support {
+    transition: none;
+    transform: scaleY(1);
+}
+
+.nav-dropdown li.has-submenu:hover > .item-inner .dropdown-support {
+    position: absolute;
+    z-index: 100000;
+    top: -100%;
+    left: 80%;
+    width: 100%;
+    height: 300%;
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform .8s;
+}
+
+.nav-dropdown li.has-submenu > .item-inner > a:hover + .dropdown-support {
+    transform: scaleX(1);
+    transition: none;
 }
 
 /*
@@ -22,6 +290,40 @@
 | Footer Nav Widget 
 |-----------------------------------------------------------------------------------------------------------
 */
+
+.footer-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    list-style: none;
+    line-height: 22px;
+}
+
+.footer-nav a {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    color: white;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.footer-nav li {
+    margin-right: 10px;
+}
+
+.footer-nav li:last-child {
+    margin-right: 0;
+}
+
+@media (min-width: 1025px) {
+    .footer-nav {
+        align-items: flex-end;
+    }
+    .footer-nav li {
+        margin-right: 30px;
+    }
+}
 
 /*
 |-----------------------------------------------------------------------------------------------------------
@@ -45,8 +347,8 @@
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: 18px;
-    right: 15px;
+    top: 5px;
+    right: 0;
     pointer-events: all;
     cursor: pointer;
     background-color: #837464;

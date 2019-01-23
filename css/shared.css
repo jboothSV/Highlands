@@ -82,6 +82,7 @@ h1 {
     color: #589580;
     font-size: 38px;
     line-height: 46px;
+    margin: 0 0 15px;
 }
 h2 {
     font-family: 'Playfair Display', serif;
@@ -90,6 +91,7 @@ h2 {
     color: #413e3b;
     font-size: 32px;
     line-height: 38px;
+    margin: 0 0 15px;
 }
 h3 {
     font-family: 'Playfair Display', serif;
@@ -98,6 +100,7 @@ h3 {
     color: #413e3b;
     font-size: 28px;
     line-height: 36px;
+    margin: 0 0 15px;
 }
 h4 {
     font-family: 'Playfair Display', serif;
@@ -106,6 +109,7 @@ h4 {
     color: #413e3b;
     font-size: 28px;
     line-height: 38px;
+    margin: 0 0 10px;
 }
 h5 {
     color: #413e3b;
@@ -115,6 +119,7 @@ h5 {
     font-style: normal;
     font-weight: 600;
     text-transform: uppercase;
+    margin: 0 0 10px;
 }
 h6 {
     color: #413e3b;
@@ -124,23 +129,28 @@ h6 {
     font-style: normal;
     font-weight: 600;
     text-transform: uppercase;
+    margin: 0 0 10px;
 }
 @media (min-width: 641px) {
     h1 {
         font-size: 52px;
         line-height: 60px;
+        margin: 0 0 20px;
     }
     h2 {
         font-size: 54px;
         line-height: 56px;
+        margin: 0 0 20px;
     }
     h3 {
         font-size: 38px;
         line-height: 40px;
+        margin: 0 0 20px;
     }
     h4 {
         font-size: 26px;
         line-height: 28px;
+        margin: 0 0 15px;
     }
 }
 h1 > a,
@@ -168,12 +178,14 @@ table tr td {
     p {
         font-size: 16px;
         line-height: 26px;
+        margin: 0 0 15px;
     }
 }
 @media (min-width: 641px) {
     p {
         font-size: 18px;
         line-height: 32px;
+        margin: 0 0 20px;
     }
 }
 ul { margin-left: 1.8em; }
@@ -253,13 +265,44 @@ ul, ol, dl {
 
 .header-section .top-header {
     display: flex;
-    align-items: center;
+    align-items: stretch;
     justify-content: flex-end;
+    height: 100%;
+}
+
+.header-section .bottom-header {
+    height: 100%;
+}
+
+.header-section .top-header .utilities {
+    display: flex;
+    align-items: center;
+}
+
+.header-section .top-header .cam-link {
+    margin-right: 30px;
+}
+
+.header-section .top-header .cam-link i {
+    color: #ddbc33;
+    margin-left: 8px;
+    padding-bottom: 4px;
+}
+
+.header-section .top-header .utilities .cam-link,
+.header-section .top-header .utilities .weather-link {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.header-section .top-header .utilities .weather-link {
+    padding-bottom: 4px;
 }
 
 .header-section .logo {
     display: inline-block;
-    width: 100%;
+    width: 80%;
     max-width: 265px;
     margin-right: 5px;
 }
@@ -299,11 +342,17 @@ ul, ol, dl {
         height: 130px;
         padding-top: 0;
     }
+    .header-section::after {
+        height: 10px;
+        bottom: -5px;
+    }
     .header-section .top-nav-cont {
-        padding: 25px 0;
+        padding: 25px 0 0;
     }
     .header-section .top-nav-cont .header-right {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
         width: 73%;
     }
     .header-section .logo {
@@ -323,14 +372,156 @@ ul, ol, dl {
     width: 100%;
 }
 
+.intro-panel {
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.intro-panel .left-col {
+    display: none;
+    width: 100%;
+    margin-bottom: 25px;
+}
+
+.intro-panel.split .left-col {
+    display: block;
+}
+
+.intro-panel .right-col {
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.intro-panel h1 {
+    font-size: 34px;
+    line-height: 40px;
+}
+
+.intro-panel h5 {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+@media (min-width: 641px) {
+    .intro-panel.split {
+        flex-direction: row;
+    }
+    .intro-panel.split .left-col {
+        width: 60%;
+    }
+    .intro-panel.split .right-col {
+        width: 40%;
+        padding-left: 15px;
+        display: flex;
+        align-items: center;
+    }
+    .intro-panel .left-col,
+    .intro-panel .right-col {
+        margin: 0;
+    }
+}
+
+@media (min-width: 1025px) {
+    .intro-panel {
+        padding: 0 50px 50px;
+    }
+    .intro-panel.split .right-col {
+        padding-left: 50px;
+    }
+    .intro-panel h1 {
+        font-size: 64px;
+        line-height: 74px;
+    }
+    .intro-panel h5 {
+        font-size: 28px;
+        line-height: 30px;
+    }
+}
+
 /*
 |-----------------------------------------------------------------------------------------------------------
 | FOOTER SECTION
 |-----------------------------------------------------------------------------------------------------------
 */
 
-.footer-section {
+.footer {
     position: relative;
-    text-align: center;
+    background: url("../includes/public/assets/images/footer-bg-sm.png")center/cover no-repeat;
+    padding: 45px 15px 145px;
     z-index: 1;
+}
+
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #413e3b;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+.footer .footer-middle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footer .footer-bottom {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+    line-height: 22px;
+}
+
+.footer .footer-logo {
+    padding: 0 15px;
+    margin-bottom: 40px;
+    margin-top: 25px;
+    text-align: center;
+}
+
+.footer .footer-middle .cont {
+    margin-bottom: 40px;
+}
+
+.footer .made-by {
+    text-align: center;
+    margin-bottom: 35px;
+} 
+
+@media (min-width: 641px) {
+    .footer {
+        background: url("../includes/public/assets/images/footer-bg.png")center/cover no-repeat;
+    }
+}
+
+@media (min-width: 1025px) {
+    .footer {
+        padding: 50px 15px 30px;
+    }
+    .footer .footer-middle {
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        max-width: 1280px;
+        margin: 70px auto 50px;
+    }
+    .footer .footer-logo {
+        padding: 0;
+        margin: 0;
+        flex: 1;
+    }
+    .footer .footer-middle .cont {
+        margin: 0;
+        flex: 1;
+    }
+    .footer .made-by {
+        margin: auto 0 0;
+        flex: 1;
+    }
 }

@@ -13,7 +13,8 @@
 	font-size: 18px;
 	color: #64513d;
 	padding: 0 15px;
-	margin-bottom: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px;
 }
 .mobilenav .shared-input,
 .mobilenav .shared-input[type] {
@@ -32,7 +33,30 @@
 	color: #64513d;
 }
 
-/* Shared Button */
+.desktop-search .shared-input,
+.desktop-search .shared-input[type] {
+    height: 60px;
+    line-height: 60px;
+    font-size: 42px;
+    color: white;
+    background-color: transparent;
+    margin: 0;
+}
+
+.desktop-search .shared-input::-webkit-input-placeholder {
+	color: white;
+}
+.desktop-search .shared-input::-moz-placeholder {
+	color: white;
+}
+.desktop-search .shared-input:-ms-input-placeholder {
+	color: white;
+}
+.desktop-search .shared-input:-moz-placeholder {
+	color: white;
+}
+
+/* Shared Submit */
 .shared-submit {
     background: transparent;
     padding: 0;
@@ -59,4 +83,16 @@
 .mobilenav .shared-form .shared-submit:focus {
     background: transparent;
     outline: none;
+}
+
+.desktop-search .shared-submit {
+    position: absolute;
+    top: 50%;
+    right: 110px;
+    transform: translateY(-50%);
+}
+
+.desktop-search .shared-submit i {
+    font-size: 30px;
+    color: white;
 }
