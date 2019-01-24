@@ -33,8 +33,6 @@
 </head>
 <body>
 
-<div class="wrapper homepage"> 
-
     <!-- ///// HEADER INCLUDE ///// -->
     <div w3-include-html="header.html"></div>
 
@@ -106,7 +104,7 @@
 
     <!-- //////  BODY  //////// -->
     <section class="content">
-        <div class="intro-panel split"><!-- remove class of split to allow full-width textbox -->
+        <div class="custom-panel two-col-right">
             <div class="left-col">
                 <img style="display:block;width:100%;" src="includes/public/assets/images/2-col-widget.png" alt="">
             </div>
@@ -119,7 +117,7 @@
                     </p>
                 </div>
             </div>
-        </div><!-- intro panel -->
+        </div><!-- panel two col right -->
         <div class="tiles">
             <div class="inner">
                 <div class="tile">
@@ -203,15 +201,15 @@
             </div>
         </div><!-- tiles -->
         <div class="banner">
-            <div class="img-cont">
-                <img src="includes/public/assets/images/banner.png" alt="">
-            </div>
+            <div class="img-cont" style="background:url('includes/public/assets/images/banner.png')center/cover no-repeat;"></div>
             <div class="slide-content">
-                <h3>Friday Night Live and Saturdays on Pine</h3>
-                <p class="desc">
-                    Live Music this weekend in Highlands, NC!!! The Blue Ridge Music Trails Friday Night Live continues...
-                </p>
-                <a href="/" class="slide-link">read more</a>
+                <div class="inner">
+                    <h3>Friday Night Live and Saturdays on Pine</h3>
+                    <p class="desc">
+                        Live Music this weekend in Highlands, NC!!! The Blue Ridge Music Trails Friday Night Live continues...
+                    </p>
+                    <a href="/" class="slide-link">read more</a>
+                </div>
             </div>
         </div>
     </section>

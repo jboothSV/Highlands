@@ -5,16 +5,64 @@
 */
 
 .header-slideshow-int {
-	position:relative;
-	display: block;
-	width: 100%;
-}
-.header-slideshow-int .imgcont,
-.header-slideshow-int .imgcont img { 
-	width: 100%; 
-	height: 100%;
+	margin-bottom: 20px;
 }
 
-@media only screen and (max-width: 40em) {}
-@media only screen and (min-width: 40.063em) and (max-width: 64em) {}
-@media only screen and (min-width: 64.063em) {}
+.header-slideshow-int .item {
+    position: relative;
+}
+
+.header-slideshow-int .item .img-cont {
+    position: relative;
+}
+
+.header-slideshow-int .item .img-cont img {
+    display: block;
+    width: 100%;
+}
+
+.header-slideshow-int .item .img-cont::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0) 100%);
+}
+
+.header-slideshow-int .item .slide-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 500px;
+    padding: 0 15px 20px;
+}
+
+.header-slideshow-int .item .slide-content h5 {
+    font-size: 24px;
+    color: white;
+}
+
+.header-slideshow-int .item .slide-content .desc {
+    color: white;
+    display: none;
+}
+
+.header-slideshow-int .item .slide-content .slide-link {
+    color: white;
+}
+
+@media (min-width: 1025px) {
+    .header-slideshow-int .item .slide-content {
+        padding: 0 35px 35px;
+    }
+    .header-slideshow-int .item .slide-content .desc {
+        display: block;
+    }
+    .header-slideshow-int .item .slide-content h5 {
+        font-size: 26px;
+        margin: 0 0 5px;
+    }
+}

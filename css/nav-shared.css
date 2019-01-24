@@ -285,6 +285,40 @@
 |-----------------------------------------------------------------------------------------------------------
 */
 
+.interior-nav {
+    display: none;
+    margin: 0;
+    list-style: none;
+}
+
+.interior-nav li {
+    display: inline-block;
+}
+
+.interior-nav li:last-child::after {
+    display: none;
+}
+
+.interior-nav li::after {
+    content: "/";
+    margin: 0 7px;
+}
+
+.interior-nav a {
+    color: #413e3b;
+    font-weight: 400;
+}
+
+.interior-nav li:last-child a {
+    font-weight: bold;
+}
+
+@media (min-width: 641px) {
+    .interior-nav {
+        display: block;
+    }
+}
+
 /*
 |-----------------------------------------------------------------------------------------------------------
 | Footer Nav Widget 
