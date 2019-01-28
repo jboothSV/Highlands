@@ -56,9 +56,6 @@
 }
 
 @media (min-width: 1025px) {
-    .shared-detail .detail-panel {
-        padding: 70px;
-    }
     .shared-detail .detail-panel::after {
         top: 20px;
         left: 20px;
@@ -348,6 +345,7 @@
 @media (min-width: 1025px) {
     .shared-bottom {
         padding: 0 70px;
+        margin-bottom: 60px;
     }
     .shared-bottom [data-gMapContainer] {
         margin-bottom: 50px;
@@ -370,5 +368,9 @@
     }
     .shared-bottom .detail-tab .tab-content {
         padding: 40px 0;
+    }
+    .shared-bottom .view-map {
+        padding: 18px 28px;
+        font-size: 18px;
     }
 }

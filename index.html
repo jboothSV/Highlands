@@ -104,20 +104,90 @@
 
     <!-- //////  BODY  //////// -->
     <section class="content">
-        <div class="custom-panel two-col-right">
+        <div class="text-panel">
+            <style>
+                .text-panel {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0 15px;
+                    margin-bottom: 15px;
+                } 
+                .text-panel .left-col,
+                .text-panel .right-col {
+                    width: 100%;
+                }   
+                .text-panel .left-col {
+                    margin-bottom: 30px;
+                }
+                .text-panel .contentRender_name_plugins_core_textbox {
+                    padding: 0;
+                }
+                .text-panel .title-1 {
+                    font-size: 32px;
+                    line-height: 36px;
+                }
+                .text-panel .title-2 {
+                    display: inline-block;
+                    color: #413e3b;
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-family: 'Crimson Text', serif;
+                    font-style: normal;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    margin: 0 0 15px;
+                }
+                .text-panel p {
+                    line-height: 32px;
+                }
+                @media (min-width: 641px) {
+                    .text-panel {
+                        flex-direction: row;
+                    }
+                    .text-panel .left-col,
+                    .text-panel .right-col {
+                        width: 50%;
+                    }
+                    .text-panel .right-col {
+                        padding-left: 15px;
+                    }
+                }
+                @media (min-width: 1025px) {
+                    .text-panel {
+                        padding: 0 50px;
+                        margin-bottom: 30px;
+                    }
+                    .text-panel .left-col {
+                        width: 58%;
+                    }
+                    .text-panel .right-col {
+                        width: 42%;
+                        padding-left: 50px;
+                        padding-top: 35px;
+                    }
+                    .text-panel .title-1 {
+                        font-size: 64px;
+                        line-height: 72px;
+                    }
+                    .text-panel .title-2 {
+                        font-size: 28px;
+                        line-height: 32px;
+                    }
+                }
+            </style>
             <div class="left-col">
                 <img style="display:block;width:100%;" src="includes/public/assets/images/2-col-widget.png" alt="">
             </div>
             <div class="right-col">
                 <div class="contentRender_name_plugins_core_textbox">
-                    <h1>The Height of Happiness</h1>
-                    <h5>elevation 4,118 feet</h5>
+                    <h1 class="title-1">The Height of Happiness</h1>
+                    <span class="title-2">elevation 4,118 feet</span>
                     <p>
                         The quaint town of Highlands, NC is a hidden jewel just 2 hours drive north of Atlanta surrounded by the Nantahala National Forest and situated atop a plateau at elevation 4118 feet.  Experience mother natures’ four seasons, explore scenic drives and hiking trails; stroll beneath Dry Falls, drive under Bridal Veil Falls or view Whitewater Falls –  the tallest east of the Rockies at 411 feet. Visit Highlands for the ultimate mountain experience and see why Southern Living chose Highlands a top 5 Small Town Getaway.
                     </p>
                 </div>
             </div>
-        </div><!-- panel two col right -->
+        </div>
         <div class="tiles">
             <div class="inner">
                 <div class="tile">

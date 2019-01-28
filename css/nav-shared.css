@@ -12,8 +12,14 @@
 }
 
 .nav-primary .primary-item {
-    margin-right: 30px;
+    margin-right: 20px;
     height: 100%;
+}
+
+@media (min-width: 1100px) {
+    .nav-primary .primary-item {
+        margin-right: 30px;
+    }
 }
 
 .nav-primary .primary-item > .item-inner {
@@ -43,7 +49,7 @@
 .nav-primary .primary-item a {
     font-family: 'Source Sans Pro', sans-serif;
     color: #64513d;
-    font-size: 26px;
+    font-size: 28px;
     font-weight: 400;
 }
 
@@ -91,6 +97,7 @@
     font-family: 'Crimson Text', serif;
     text-transform: uppercase;
     color: #64513d;
+    font-size: 18px;
 }
 
 .nav-industry .nav-dropdown {
@@ -407,8 +414,9 @@
     display: none;
     position: absolute;
     top: 100%;
-    right: 0;
+    right: -15px;
     width: 100%;
+    min-width: 375px;
     max-width: 450px;
     background-color: #64513d;
     pointer-events: all;
@@ -419,7 +427,7 @@
 }
 
 .mobilenav .mobile-dd .dd-top {
-    margin: 12px 0;
+    margin: 20px 0;
     padding: 0 15px;
 }
 
@@ -451,7 +459,7 @@
 }
 
 .mobilenav .nav-list.primary {
-    margin: 25px 0;
+    margin: 25px 0 15px;
 }
 
 .mobilenav .nav-list .item-inner {
@@ -468,6 +476,10 @@
 
 .mobilenav .nav-list > li > ul > li > ul > li .item-inner {
     padding: 10px 15px 10px 32px;
+}
+
+.mobilenav .nav-list > li > ul > li > ul > li > ul > li .item-inner {
+    padding: 10px 15px 10px 38px;
 }
 
 .mobilenav .nav-list .item-inner .toggle-submenu {
@@ -518,7 +530,7 @@
     text-transform: uppercase;
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .mobilenav {
         display: none;
     }
